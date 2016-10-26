@@ -1,0 +1,33 @@
+<html>
+
+    <body>
+    
+        <ul>
+            <li>first list item</li>
+            <li>second list item</li>
+        
+        </ul>
+        
+        <script>
+            var ulClone = document.querySelector('ul').cloneNode();
+            alert(ulClone.innerHTML);
+            
+            /* to clone all of its children pass true for cloneNode
+            */
+            
+            var entireListClone = document.querySelector('ul').cloneNode(true);
+            alert(entireListClone.innerHTML);
+            
+            /*
+            When cloning an Element node, all of its attributes and their values
+            (including in-line events) are cloned as well. Anything added with ad
+            dEventListener() or node.onclick is not cloned.
+            You  might  think  that  cloning  a  node  and  its  children  using  clone
+            Node(true) would return a NodeList, but it in fact does not.
+            cloneNode() may lead to duplicate element IDs in a document.
+
+*/
+        
+        </script>
+    </body>
+</html>

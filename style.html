@@ -1,0 +1,39 @@
+<html>
+    <body>
+        <div style="background-color:red;border:1px solid black;height:100px;width:100px;"></div>
+        
+        
+        <div id="modifyDiv"></div>
+        
+        <p>This is a para. style has been added by js</p>
+        <script>
+            var divStyle = document.querySelector('div').style;
+            
+            alert(divStyle);
+            
+            var obj = document.getElementById('modifyDiv').style;
+            
+            obj.background = "blue";
+            obj.border = '1px solid black';
+            obj.width = '100px';
+            obj.height = '199px';
+            
+            /*
+            For any CSS property value that requires a unit of measure, remember
+to  include  the  appropriate  unit  (e.g.,  style.width  =  '300px';  not
+style.width = '300';). 
+*/
+            obj.setProperty('border', '5px orange solid')
+            
+            
+            obj.removeProperty('background');
+            
+            var pEle = document.querySelector('p');
+            pEle.setAttribute('style',
+                             'background: yellow; color: blue; border: 5px solid green; height: 100px;width: 100px;')
+            
+            
+        </script>
+    </body>
+
+</html>

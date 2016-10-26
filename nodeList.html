@@ -1,0 +1,21 @@
+<html>
+
+    <body>
+        <ul>
+            <li>First list item</li>
+            <li>Second list item</li>
+        </ul>
+        
+        <script>
+            
+            /* nodelist creats an array-like(not js array) of all the immediate child nodes*/
+            var ulChileNodes = document.querySelector('ul').childNodes;
+            alert(ulChileNodes);
+            
+            /* to convert this to an arry use slice */
+            
+            var arr = Array.prototype.slice.call(ulChileNodes);
+            alert(arr);
+        </script>
+    </body>
+</html>

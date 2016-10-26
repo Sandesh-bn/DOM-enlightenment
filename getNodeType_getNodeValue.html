@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <body>
+    <a href="#">this is a link</a>
+    <p>This is a para</p>
+    <script>
+    //Every node has nodeType and nodeName property inherited from Node.
+    
+    // for docytpe it is 10
+    console.log("document.doctype: " + document.doctype.nodeName + ",  " + document.doctype.nodeType);
+        
+    // for document it is 9
+    console.log(document.nodeName, document.nodeType);
+        
+    // for element , nodetype will be 1 which maps to ELEMENT_NODE
+    console.log(document.querySelector('a').nodeName, document.querySelector('a').nodeType)
+    
+    console.log(document.querySelector('p').nodeName, document.querySelector('p').nodeType)
+    
+    
+    // for text node it is 3
+    console.log(document.querySelector('a').firstChild.nodeName, document.querySelector('a').firstChild.nodeType)
+    
+    
+    // nodevalue returns null for all node types except for text and comment
+    console.log("\n\nnode value:")
+    console.log(document.doctype.nodeValue);
+    console.log(document.nodeValue);
+        console.log(document.createDocumentFragment().nodeValue);
+        console.log(document.querySelector('a').nodeValue);
+        console.log(document.querySelector('a').firstChild.nodeValue);
+    
+    </script>
+    </body>
+
+</html>

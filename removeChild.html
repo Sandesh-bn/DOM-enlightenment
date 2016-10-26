@@ -1,0 +1,48 @@
+<html>
+    <body>
+    
+        <div id="A">first line</div>
+        <div id="B">Second line</div>
+        <div id="C">There were two lines above me inside of div tags. first div tag was removed. text inside second div tag was removed</div>
+        
+        
+        <script>
+        /* to remove an element
+        select the node you want to remove.
+        gain access to parent node using parentNode.
+        call removeChild on the parentNode by passing the node you want to remove */
+            
+        var divA = document.getElementById("A");
+        var divAParent = divA.parentNode;
+        divAParent.removeChild(divA);
+            
+            
+       /* to remove a textNode
+       select textNode
+       gain access to its parent tag using parentNode.
+       call removeChild on the parentTag
+       */
+            
+       var divBText = document.getElementById("B").firstChild;
+       var divBEle = document.getElementById("B");
+        
+        divBEle.removeChild(divBText);
+            
+            
+        /*
+        Depending on what you are removing or replacing, simply providing
+the innerHTML, outerHTML, and textContent properties with an empty
+string might be easier and faster. Be careful, however, as memory leaks
+in the browser might come back to haunt you.
+replaceChild() and removeChild() return the replaced and removed
+node, respectively. Basically, the node is not gone just because you re‐
+place or remove it. These actions simply take the node out of the current
+live document. You still have a reference to it in memory.
+*/
+       
+        
+        </script>
+    </body>
+
+
+</html>

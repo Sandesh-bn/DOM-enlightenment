@@ -1,0 +1,20 @@
+<html>
+    <body>
+        <a href="google.com" class="homePage" foo="bar" style="color:blue">link</a>
+    
+        <script>
+            var attr = document.querySelector('a').attributes;
+            
+            var str = "";
+            for (var i = 0; i < attr.length; i++)
+                str += (attr[i].nodeName + " " + attr[i].nodeValue + "\n");
+            alert(str);
+            
+            /*
+            The array returned from accessing the attributes property should be
+considered live. This means its contents can be changed at any time.
+            */
+        </script>
+    </body>
+
+</html>

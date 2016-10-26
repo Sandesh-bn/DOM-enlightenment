@@ -1,0 +1,21 @@
+<html>
+    <body>
+    <ul>
+        
+        <li>2 second element</li>    
+        <li>3 third element</li>
+    </ul>
+    
+    <script>
+        
+        /* if you don't specify a second argument for insertBefor, it will
+        behave like appendChild */
+        var ele = document.createElement('li');
+        var txt = document.createTextNode("this is list item inserted using insertBefore");
+        ele.appendChild(txt);
+        
+        var ulEle = document.querySelector('ul');
+        ulEle.insertBefore(ele, ulEle.firstChild);
+    </script>
+    </body>
+</html>

@@ -1,0 +1,19 @@
+<html>
+    <body>
+        <p>Hi <strong> cody </strong></p>
+        
+        
+        <p id="alpha">abcdefghijk
+        </p>
+        <script>
+            // get textual content
+            // even a single whitespace creates a textnode
+            // the below two commands are exactly same.
+            // returns text in the firstchild
+            alert(document.querySelector('p').firstChild.data);
+            alert(document.querySelector('p').firstChild.nodeValue);
+        </script>
+    
+    </body>
+
+</html>

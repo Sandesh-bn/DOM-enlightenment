@@ -1,0 +1,27 @@
+<html>
+
+    <body>
+        
+        <i id="elem">html</i>
+        
+        <script>
+        /* 
+        use insertAdjacentHTML to insert elements 
+        before the beginning of tag
+        after the opening tag
+        before the closing tag
+        after the closing tag
+        
+        It works only with element nodes
+        */
+         var ele = document.getElementById('elem');
+         
+         ele.insertAdjacentHTML('beforebegin', "<span style='color:blue'>before tag!</span>");
+         ele.insertAdjacentHTML('afterbegin', "<span>after begin!</span>")
+         ele.insertAdjacentHTML('beforeend', "<span>before end!</span>");
+         ele.insertAdjacentHTML('afterend', "<strong>after end!</strong>")
+         
+         console.log(document.body.innerHTML);
+        </script>
+    </body>
+</html>

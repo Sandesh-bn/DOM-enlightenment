@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <link href="#" id="firstStyleSheet" rel="stylesheet" type="text/css">
+        <link href="#" id="second" rel="stylesheet" type="text/css">
+        <style id="largeFont">
+            p {
+                font-size: 5em;
+            }
+        </style>
+        <style id="styleID">
+            p{ color: red;}
+        </style>
+    </head>
+    <body>
+        <p>the color and background are due to css and it has been added by javascritp</p>
+        <h1>one of the stylesheet is disabled by js</h1>
+    
+        <script>
+            /* to add extern stylesheet use HTMLLinkElement
+            to add an inline stylesheet use HTMLStyleElement
+            */
+            
+            
+            /*
+            document.styleSheets return list of all stylesheets
+            it returns a live list
+            */
+            
+            alert("There are " + document.styleSheets.length + " stylesheets")
+            
+            // modify additional rules
+            var styleEle = document.getElementById('styleID').sheet;
+            styleEle.cssRules[0].style.color='purple';
+            
+            // add rules: create style object. define a rule and append it to head.
+            var innerStyleEle = document.createElement('style');
+            innerStyleEle.innerHTML = 'body{background:yellow}';
+            
+            document.querySelector('head').appendChild(innerStyleEle);
+            
+            
+            // disable styles
+            //WRONG WAY TO DO IT:
+            //var eles = document.getElementsByTagName('style').disabled = true;
+            
+            document.querySelector('#largeFont').disabled = true;
+        </script>
+    
+    </body>
+
+</html>

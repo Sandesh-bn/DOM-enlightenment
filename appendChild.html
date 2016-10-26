@@ -1,0 +1,20 @@
+<html>
+
+    <body>
+    
+        <p>This is <i>para</i></p>
+        
+        <script>
+            // appendChild allows us to append html elements or textNode to an existing tag.
+            // appendChild appends the new node as the last child of the parent Node
+            
+            var ele = document.createElement('strong');
+            var txt = document.createTextNode("this is inserted by js");
+            
+            document.querySelector('p').appendChild(ele);
+            document.querySelector('strong').appendChild(txt);
+            
+            console.log(document.body.innerHTML)
+        </script>
+    </body>
+</html>

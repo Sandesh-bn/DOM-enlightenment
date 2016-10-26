@@ -1,0 +1,47 @@
+<html>
+    <body>
+    
+        <p>abcdefgh</p>
+        
+        <div>
+            <h1>Dude</h1>
+            <p>you <strong> chase </strong> greatness</p>
+        </div>
+    
+        <script>
+            var pText = document.querySelector('p').firstChild;
+            pText.appendData('!');
+            
+            alert("1 " + pText.data)
+            
+            pText.deleteData(2, 3);
+            alert("2 " + pText.data);
+            
+            pText.insertData(1, '999');
+            alert("3 " + pText.data);
+            
+            pText.replaceData(2, 2, 'stunna');
+            alert("4 " + pText.data);
+            
+            
+            // textContent removes all childnodes and replaces it with content
+            
+            document.body.textContent = "I am simplified text added by js that replace a lot of inner text."
+            
+            alert(document.querySelector('div').textContent)
+            
+            /*
+             innerText is aware of CSS. So, if you have hidden text, innerText ignores this text,
+whereas textContent does not.
+• Because innerText cares about CSS, it will trigger a reflow, whereas textContent
+will not.
+• innerText ignores the Text nodes contained in <script> and <style> elements.
+• innerText, unlike textContent, will normalize the text that is returned. Just think
+of textContent as returning exactly what is in the document, with the markup
+removed. This will include whitespace, line breaks, and carriage returns
+*/
+        </script>
+    </body>
+
+
+</html>

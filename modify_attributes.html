@@ -1,0 +1,32 @@
+<html>
+    <body>
+    
+        <a href="#" title="title" style="margin:0" class="yes" >Link</a>
+        
+        
+        <script>
+            var attr = document.querySelector('a');
+                        
+
+            alert("url:  " + attr.getAttribute('href'))
+
+            attr.removeAttribute('href');
+            attr.removeAttribute('title');
+            attr.removeAttribute('style');
+            attr.removeAttribute('class');
+            
+            attr.removeAttribute('foo');
+            
+            
+            attr.setAttribute('href', 'https://www.google.com');
+            attr.setAttribute('title', 'title');
+            attr.setAttribute('style', 'color:blue');
+            attr.setAttribute('data-foo', 'dataFoo');
+            
+            alert("url:  " + attr.getAttribute('href'))
+            
+            alert("<a> has style attribute: " + attr.hasAttribute('style'))
+        </script>
+    </body>
+
+</html>

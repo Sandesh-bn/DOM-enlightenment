@@ -1,0 +1,32 @@
+<html>
+
+    <body>
+        
+        <div id="A"></div>
+        <span id="B"></span>
+        <p id="C"></p>
+        <h2 id="D"></h2>
+        <h3 id="E"></h3>
+        <div id="F"></div>
+        <script>
+            /* use innerHTML, outerHTML, textContent, innerText 
+            top populate tags */
+            
+            /* innerHTML will parse the html code. textContent will treat any html code as normal string
+            innerHTML should be used sparingly as it is resource hog */
+            document.getElementById("A").innerHTML = "<i>Italic text added by javascript</h1>";
+            
+            // replaces span tag
+            document.getElementById("B").outerHTML = '<h1 id="B" class="new">outerHTML text by js</h1>'
+            document.getElementById("D").textContent = "This is h2 content added by js";
+            
+            document.getElementById("E").innerText = "inner text added by js"
+            
+            document.getElementById("F").outerText = "previous div tag is replace with js"
+            
+            console.log(document.body.innerHTML)
+        </script>
+    
+    </body>
+
+</html>

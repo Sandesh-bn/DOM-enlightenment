@@ -1,0 +1,41 @@
+<html>
+    <body>
+        <a href="#">Hi</a>
+        <p>This is paragraph content</p>
+        <h1></h1>
+        <script>
+            
+            /* most common node types:
+            DOCUMENT_NODE (eg.window.document)
+            ELEMENT_NODE (<body>, <a>, <p> <script>, <style> )
+            ATTRIBUTE_NODE (class="important")
+            TEXT_NODE (text content inside html)
+            DOCUMENT_FRAGMENT_NODE
+            DOCUMENT_TYPE_NODE (eg> <!DOCTYPE html>)
+            */
+            //console.log(document.doctype.nodeValue);
+            console.log(document.nodeValue);
+            console.log(document.createDocumentFragment().nodeValue);
+            console.log(document.querySelector('a').firstChild.nodeValue);
+            console.log(document.querySelector('p').firstChild.nodeValue);
+            
+            
+            // create element node
+            var elementNode = document.createElement('h2');
+            
+            // create textNode
+            var textNode = document.createTextNode('Hi');
+            
+            /*
+            The createElement() method accepts one parameter that is a string
+            specifying the element to be created. The string is the same string that
+            is returned from the tagName property of an Element object.
+            The createAttribute() method is deprecated and should not be used
+            for creating attribute nodes. 
+            */
+            
+            /* use createComment() to create comment node. */
+        </script>
+    </body>
+
+</html>

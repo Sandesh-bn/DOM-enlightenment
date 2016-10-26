@@ -1,0 +1,48 @@
+<html>
+    <body>
+    
+        <ul>
+            <li>first</li>
+            <li>second</li>
+            <li>Third</li>
+            <li id="last">last item</li>
+            
+            <p class='para'>first para</p>
+            <p class='para'>second para</p>
+            <h1 class='para'>third para</h1>
+            
+            <p >another p</p>
+            <p>last p</p>
+        </ul>
+        <script>
+            // queryselector selects the first item that matches the selection
+            alert(document.querySelector('li').textContent)
+            
+            // getElementById is for an exact match using id
+            alert(document.getElementById('last').textContent)
+            
+            
+            /**************/
+            /* returns list of items */
+            
+            // select all li
+            alert(document.querySelectorAll('li'))
+            
+            // select by tag name
+            alert(document.getElementsByTagName('li'));
+            
+            
+            // select by class
+            alert(document.getElementsByClassName('para'));
+            
+            /* getElementsByTagName() and getElementsByClassName()
+               returns a live list.
+               querySelectorAll() returns static list
+               
+            */
+        </script>
+    </body>
+
+
+
+</html>

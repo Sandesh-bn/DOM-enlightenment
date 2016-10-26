@@ -1,0 +1,32 @@
+<html>
+
+    <body>
+       
+        <ul><!-- comment -->
+            <li id="A"></li>
+            <li id="B"></li>
+            
+            <!-- second comment -->
+        </ul>
+        
+        <script>
+            var ulEle = document.querySelector('ul');
+            
+            // parentnode for ul
+            alert("Parent node for ul: " + ulEle.parentNode.nodeName);
+            
+            // wfirst child of ul
+            alert("first child of ul: " + ulEle.firstChild.nodeName);
+            
+            // last child of ul is textnode NOT COMMENT due to linebreak
+            alert("last child of ul: "  + ulEle.lastChild.nodeName);
+            
+            
+            /* to skip comments and text nodes use following methods */
+            alert("first childe element of ul: " + ulEle.firstElementChild.nodeName);
+            
+            alert("last child element of ul: " + ulEle.lastElementChild.nodeName);
+        </script>
+    </body>
+
+</html>
